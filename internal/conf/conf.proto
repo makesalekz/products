@@ -1,0 +1,20 @@
+syntax = "proto3";
+package kratos.api;
+
+option go_package = "gitlab.calendaria.team/services/products/internal/conf;conf";
+
+import "google/protobuf/duration.proto";
+
+message Bootstrap {
+  Server server = 1;
+  string db = 2;
+}
+
+message Server {
+  message GRPC {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+  GRPC grpc = 1;
+}

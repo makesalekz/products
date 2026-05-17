@@ -1,0 +1,241 @@
+syntax = "proto3";
+
+package products.v1;
+
+option go_package = "gitlab.calendaria.team/services/products/api/products/v1;products_v1";
+
+import "api/products/v1/models.proto";
+import "api/utils/v1/models.proto";
+
+service ProductsService {
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductReply);
+  rpc GetProduct(GetProductRequest) returns (GetProductReply);
+  rpc ListProducts(ListProductsRequest) returns (ListProductsReply);
+  rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductReply);
+  rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductReply);
+  rpc AddBarcode(AddBarcodeRequest) returns (AddBarcodeReply);
+  rpc RemoveBarcode(RemoveBarcodeRequest) returns (RemoveBarcodeReply);
+  rpc ListBarcodes(ListBarcodesRequest) returns (ListBarcodesReply);
+  rpc GetProductByBarcode(GetProductByBarcodeRequest) returns (GetProductByBarcodeReply);
+  rpc SearchProducts(SearchProductsRequest) returns (SearchProductsReply);
+  rpc SetPrice(SetPriceRequest) returns (SetPriceReply);
+  rpc GetPriceHistory(GetPriceHistoryRequest) returns (GetPriceHistoryReply);
+  rpc CreateCategory(CreateCategoryRequest) returns (CreateCategoryReply);
+  rpc UpdateCategory(UpdateCategoryRequest) returns (UpdateCategoryReply);
+  rpc DeleteCategory(DeleteCategoryRequest) returns (DeleteCategoryReply);
+  rpc GetCategory(GetCategoryRequest) returns (GetCategoryReply);
+  rpc ListCategories(ListCategoriesRequest) returns (ListCategoriesReply);
+  rpc ImportProducts(ImportProductsRequest) returns (ImportProductsReply);
+  rpc ImportFromUMAG(ImportFromUMAGRequest) returns (ImportFromUMAGReply);
+}
+
+message CreateProductRequest {
+  string name = 1;
+  string barcode = 2;
+  int64 category_id = 3;
+  string unit = 4;
+  string purchase_price = 5;
+  string selling_price = 6;
+  string description = 7;
+  string sku = 8;
+}
+
+message CreateProductReply {
+  Product product = 1;
+}
+
+message GetProductRequest {
+  int64 id = 1;
+}
+
+message GetProductReply {
+  Product product = 1;
+}
+
+message ListProductsRequest {
+  utils.v1.PaginateRequest paginate = 1;
+}
+
+message ListProductsReply {
+  repeated Product items = 1;
+  utils.v1.PaginateReply paginate = 2;
+}
+
+message UpdateProductRequest {
+  int64 id = 1;
+  string name = 2;
+  string barcode = 3;
+  int64 category_id = 4;
+  string unit = 5;
+  string purchase_price = 6;
+  string selling_price = 7;
+  string description = 8;
+  string sku = 9;
+  string reason = 14;
+}
+
+message UpdateProductReply {
+  Product product = 1;
+}
+
+message DeleteProductRequest {
+  int64 id = 1;
+}
+
+message DeleteProductReply {}
+
+message AddBarcodeRequest {
+  int64 product_id = 1;
+  string value = 2;
+  string type = 3;
+}
+
+message AddBarcodeReply {
+  Barcode barcode = 1;
+}
+
+message RemoveBarcodeRequest {
+  int64 id = 1;
+}
+
+message RemoveBarcodeReply {}
+
+message ListBarcodesRequest {
+  int64 product_id = 1;
+}
+
+message ListBarcodesReply {
+  repeated Barcode items = 1;
+}
+
+message GetProductByBarcodeRequest {
+  string barcode = 1;
+}
+
+message GetProductByBarcodeReply {
+  Product product = 1;
+}
+
+message SearchProductsRequest {
+  string query = 1;
+  utils.v1.PaginateRequest paginate = 2;
+}
+
+message SearchProductsReply {
+  repeated Product items = 1;
+  utils.v1.PaginateReply paginate = 2;
+}
+
+message SetPriceRequest {
+  int64 product_id = 1;
+  string price_type = 2;
+  string new_price = 3;
+  string reason = 4;
+}
+
+message SetPriceReply {
+  Product product = 1;
+}
+
+message GetPriceHistoryRequest {
+  int64 product_id = 1;
+  string price_type = 2;
+  utils.v1.PaginateRequest paginate = 3;
+}
+
+message GetPriceHistoryReply {
+  repeated PriceHistory items = 1;
+  utils.v1.PaginateReply paginate = 2;
+}
+
+message CreateCategoryRequest {
+  string name = 1;
+  int64 parent_id = 2;
+}
+
+message CreateCategoryReply {
+  Category category = 1;
+}
+
+message UpdateCategoryRequest {
+  int64 id = 1;
+  string name = 2;
+  int64 parent_id = 3;
+}
+
+message UpdateCategoryReply {
+  Category category = 1;
+}
+
+message DeleteCategoryRequest {
+  int64 id = 1;
+}
+
+message DeleteCategoryReply {}
+
+message GetCategoryRequest {
+  int64 id = 1;
+  bool with_products = 2;
+}
+
+message GetCategoryReply {
+  Category category = 1;
+  repeated Product products = 2;
+}
+
+message ListCategoriesRequest {
+  int64 parent_id = 1;
+}
+
+message ListCategoriesReply {
+  repeated Category items = 1;
+}
+
+// --- Import ---
+
+enum ImportFormat {
+  CSV = 0;
+  XLSX = 1;
+}
+
+message ColumnMapping {
+  int32 name = 1;
+  int32 barcode = 2;
+  int32 selling_price = 3;
+  int32 purchase_price = 4;
+  int32 category = 5;
+  int32 unit = 6;
+  int32 sku = 7;
+  int32 description = 8;
+}
+
+message ImportRowError {
+  int32 row = 1;
+  string message = 2;
+}
+
+message ImportProductsRequest {
+  bytes file = 1;
+  ImportFormat format = 2;
+  ColumnMapping mapping = 3;
+  bool skip_header = 4;
+  bool auto_create_categories = 5;
+}
+
+message ImportProductsReply {
+  int32 created = 1;
+  int32 skipped = 2;
+  int32 errors = 3;
+  repeated ImportRowError error_details = 4;
+}
+
+message ImportFromUMAGRequest {
+  bytes file = 1;
+}
+
+message ImportFromUMAGReply {
+  int32 created = 1;
+  int32 skipped = 2;
+  int32 errors = 3;
+  repeated ImportRowError error_details = 4;
+}

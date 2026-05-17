@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package products.v1;
+
+option go_package = "gitlab.calendaria.team/services/products/api/products/v1;products_v1";
+
+message Product {
+  int64 id = 1;
+  int64 tenant_id = 2;
+  string name = 3;
+  string barcode = 4;
+  int64 category_id = 5;
+  string unit = 6;
+  string purchase_price = 7;
+  string selling_price = 8;
+  string description = 9;
+  string sku = 10;
+  string created_at = 11;
+  string updated_at = 12;
+  repeated Barcode barcodes = 13;
+}
+
+message Barcode {
+  int64 id = 1;
+  int64 tenant_id = 2;
+  int64 product_id = 3;
+  string value = 4;
+  string type = 5;
+  string created_at = 6;
+}
+
+message PriceHistory {
+  int64 id = 1;
+  int64 tenant_id = 2;
+  int64 product_id = 3;
+  string price_type = 4;
+  string old_price = 5;
+  string new_price = 6;
+  int64 changed_by = 7;
+  string reason = 8;
+  string changed_at = 9;
+}
+
+message Category {
+  int64 id = 1;
+  int64 tenant_id = 2;
+  int64 parent_id = 3;
+  string name = 4;
+  string created_at = 5;
+  string updated_at = 6;
+}
