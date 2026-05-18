@@ -491,7 +491,7 @@ const file_api_products_v1_models_proto_rawDesc = "" +
 	"\n" +
 	"created_at\x18\x05 \x01(\tR\tcreatedAt\x12\x1d\n" +
 	"\n" +
-	"updated_at\x18\x06 \x01(\tR\tupdatedAtBFZDgithub.com/makesalekz/products/api/products/v1;products_v1b\x06proto3"
+	"updated_at\x18\x06 \x01(\tR\tupdatedAtB<Z:github.com/makesalekz/products/api/products/v1;products_v1b\x06proto3"
 
 var (
 	file_api_products_v1_models_proto_rawDescOnce sync.Once
