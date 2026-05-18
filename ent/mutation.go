@@ -12,12 +12,12 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/shopspring/decimal"
-	"gitlab.calendaria.team/services/products/ent/barcode"
-	"gitlab.calendaria.team/services/products/ent/category"
-	"gitlab.calendaria.team/services/products/ent/enum"
-	"gitlab.calendaria.team/services/products/ent/predicate"
-	"gitlab.calendaria.team/services/products/ent/pricehistory"
-	"gitlab.calendaria.team/services/products/ent/product"
+	"github.com/makesalekz/products/ent/barcode"
+	"github.com/makesalekz/products/ent/category"
+	"github.com/makesalekz/products/ent/enum"
+	"github.com/makesalekz/products/ent/predicate"
+	"github.com/makesalekz/products/ent/pricehistory"
+	"github.com/makesalekz/products/ent/product"
 )
 
 const (

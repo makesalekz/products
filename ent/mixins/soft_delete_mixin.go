@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	theent "gitlab.calendaria.team/services/products/ent"
-	"gitlab.calendaria.team/services/products/ent/hook"
-	"gitlab.calendaria.team/services/products/ent/intercept"
+	theent "github.com/makesalekz/products/ent"
+	"github.com/makesalekz/products/ent/hook"
+	"github.com/makesalekz/products/ent/intercept"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"

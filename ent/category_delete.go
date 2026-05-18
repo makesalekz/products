@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/products/ent/category"
-	"gitlab.calendaria.team/services/products/ent/predicate"
+	"github.com/makesalekz/products/ent/category"
+	"github.com/makesalekz/products/ent/predicate"
 )
 
 // CategoryDelete is the builder for deleting a Category entity.

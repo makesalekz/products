@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/products/ent/barcode"
-	"gitlab.calendaria.team/services/products/ent/predicate"
+	"github.com/makesalekz/products/ent/barcode"
+	"github.com/makesalekz/products/ent/predicate"
 )
 
 // BarcodeDelete is the builder for deleting a Barcode entity.

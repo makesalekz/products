@@ -3,8 +3,8 @@ package data
 import (
 	"context"
 
-	"gitlab.calendaria.team/services/products/ent"
-	"gitlab.calendaria.team/services/products/ent/barcode"
+	"github.com/makesalekz/products/ent"
+	"github.com/makesalekz/products/ent/barcode"
 )
 
 type BarcodesRepo interface {

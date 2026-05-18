@@ -12,10 +12,10 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/shopspring/decimal"
-	"gitlab.calendaria.team/services/products/ent/barcode"
-	"gitlab.calendaria.team/services/products/ent/enum"
-	"gitlab.calendaria.team/services/products/ent/pricehistory"
-	"gitlab.calendaria.team/services/products/ent/product"
+	"github.com/makesalekz/products/ent/barcode"
+	"github.com/makesalekz/products/ent/enum"
+	"github.com/makesalekz/products/ent/pricehistory"
+	"github.com/makesalekz/products/ent/product"
 )
 
 // ProductCreate is the builder for creating a Product entity.

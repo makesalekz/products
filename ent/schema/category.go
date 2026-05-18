@@ -1,7 +1,7 @@
 package schema
 
 import (
-	"gitlab.calendaria.team/services/products/ent/mixins"
+	"github.com/makesalekz/products/ent/mixins"
 
 	"entgo.io/ent"
 	"entgo.io/ent/schema/edge"

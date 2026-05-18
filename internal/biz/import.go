@@ -8,8 +8,8 @@ import (
 	"io"
 	"strings"
 
-	"gitlab.calendaria.team/services/products/ent/enum"
-	"gitlab.calendaria.team/services/products/internal/data"
+	"github.com/makesalekz/products/ent/enum"
+	"github.com/makesalekz/products/internal/data"
 
 	"github.com/shopspring/decimal"
 	"github.com/xuri/excelize/v2"

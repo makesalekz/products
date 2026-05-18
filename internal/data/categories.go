@@ -3,9 +3,9 @@ package data
 import (
 	"context"
 
-	"gitlab.calendaria.team/services/products/ent"
-	"gitlab.calendaria.team/services/products/ent/category"
-	"gitlab.calendaria.team/services/products/ent/product"
+	"github.com/makesalekz/products/ent"
+	"github.com/makesalekz/products/ent/category"
+	"github.com/makesalekz/products/ent/product"
 )
 
 type CategoriesRepo interface {

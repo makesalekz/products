@@ -5,11 +5,11 @@ package runtime
 import (
 	"time"
 
-	"gitlab.calendaria.team/services/products/ent/barcode"
-	"gitlab.calendaria.team/services/products/ent/category"
-	"gitlab.calendaria.team/services/products/ent/pricehistory"
-	"gitlab.calendaria.team/services/products/ent/product"
-	"gitlab.calendaria.team/services/products/ent/schema"
+	"github.com/makesalekz/products/ent/barcode"
+	"github.com/makesalekz/products/ent/category"
+	"github.com/makesalekz/products/ent/pricehistory"
+	"github.com/makesalekz/products/ent/product"
+	"github.com/makesalekz/products/ent/schema"
 )
 
 // The init function reads all schema descriptors with runtime code

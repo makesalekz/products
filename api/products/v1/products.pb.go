@@ -7,7 +7,7 @@
 package products_v1
 
 import (
-	v1 "gitlab.calendaria.team/services/utils/api/utils/v1"
+	v1 "github.com/makesalekz/utils/api/utils/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -2369,7 +2369,7 @@ const file_api_products_v1_products_proto_rawDesc = "" +
 	"\vGetCategory\x12\x1f.products.v1.GetCategoryRequest\x1a\x1d.products.v1.GetCategoryReply\x12V\n" +
 	"\x0eListCategories\x12\".products.v1.ListCategoriesRequest\x1a .products.v1.ListCategoriesReply\x12V\n" +
 	"\x0eImportProducts\x12\".products.v1.ImportProductsRequest\x1a .products.v1.ImportProductsReply\x12V\n" +
-	"\x0eImportFromUMAG\x12\".products.v1.ImportFromUMAGRequest\x1a .products.v1.ImportFromUMAGReplyBFZDgitlab.calendaria.team/services/products/api/products/v1;products_v1b\x06proto3"
+	"\x0eImportFromUMAG\x12\".products.v1.ImportFromUMAGRequest\x1a .products.v1.ImportFromUMAGReplyBFZDgithub.com/makesalekz/products/api/products/v1;products_v1b\x06proto3"
 
 var (
 	file_api_products_v1_products_proto_rawDescOnce sync.Once

@@ -11,9 +11,9 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/products/ent/predicate"
-	"gitlab.calendaria.team/services/products/ent/pricehistory"
-	"gitlab.calendaria.team/services/products/ent/product"
+	"github.com/makesalekz/products/ent/predicate"
+	"github.com/makesalekz/products/ent/pricehistory"
+	"github.com/makesalekz/products/ent/product"
 )
 
 // PriceHistoryQuery is the builder for querying PriceHistory entities.

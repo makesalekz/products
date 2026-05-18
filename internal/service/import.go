@@ -3,9 +3,9 @@ package service
 import (
 	"context"
 
-	v1 "gitlab.calendaria.team/services/products/api/products/v1"
-	"gitlab.calendaria.team/services/products/internal/biz"
-	"gitlab.calendaria.team/services/utils/v2/auth"
+	v1 "github.com/makesalekz/products/api/products/v1"
+	"github.com/makesalekz/products/internal/biz"
+	"github.com/makesalekz/utils/v2/auth"
 )
 
 func (s *ProductsService) ImportProducts(ctx context.Context, req *v1.ImportProductsRequest) (*v1.ImportProductsReply, error) {

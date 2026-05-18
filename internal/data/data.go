@@ -4,15 +4,15 @@ import (
 	"context"
 	"os"
 
-	"gitlab.calendaria.team/services/products/ent"
-	"gitlab.calendaria.team/services/products/internal/conf"
+	"github.com/makesalekz/products/ent"
+	"github.com/makesalekz/products/internal/conf"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
 
 	_ "github.com/lib/pq"
 
-	_ "gitlab.calendaria.team/services/products/ent/runtime"
+	_ "github.com/makesalekz/products/ent/runtime"
 )
 
 var ProviderSet = wire.NewSet(

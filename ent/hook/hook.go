@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"gitlab.calendaria.team/services/products/ent"
+	"github.com/makesalekz/products/ent"
 )
 
 // The BarcodeFunc type is an adapter to allow the use of ordinary

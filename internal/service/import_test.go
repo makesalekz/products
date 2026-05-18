@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	v1 "gitlab.calendaria.team/services/products/api/products/v1"
-	"gitlab.calendaria.team/services/products/internal/biz"
+	v1 "github.com/makesalekz/products/api/products/v1"
+	"github.com/makesalekz/products/internal/biz"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

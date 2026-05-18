@@ -3,10 +3,10 @@ package data
 import (
 	"context"
 
-	"gitlab.calendaria.team/services/products/ent"
-	"gitlab.calendaria.team/services/products/ent/enum"
-	"gitlab.calendaria.team/services/products/ent/pricehistory"
-	utils_v1 "gitlab.calendaria.team/services/utils/api/utils/v1"
+	"github.com/makesalekz/products/ent"
+	"github.com/makesalekz/products/ent/enum"
+	"github.com/makesalekz/products/ent/pricehistory"
+	utils_v1 "github.com/makesalekz/utils/api/utils/v1"
 )
 
 type PriceHistoriesRepo interface {

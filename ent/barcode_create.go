@@ -11,9 +11,9 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/products/ent/barcode"
-	"gitlab.calendaria.team/services/products/ent/enum"
-	"gitlab.calendaria.team/services/products/ent/product"
+	"github.com/makesalekz/products/ent/barcode"
+	"github.com/makesalekz/products/ent/enum"
+	"github.com/makesalekz/products/ent/product"
 )
 
 // BarcodeCreate is the builder for creating a Barcode entity.

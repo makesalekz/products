@@ -11,7 +11,7 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/products/ent/category"
+	"github.com/makesalekz/products/ent/category"
 )
 
 // CategoryCreate is the builder for creating a Category entity.

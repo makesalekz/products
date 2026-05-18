@@ -3,10 +3,10 @@ package data
 import (
 	"context"
 
-	"gitlab.calendaria.team/services/products/ent"
-	"gitlab.calendaria.team/services/products/ent/barcode"
-	"gitlab.calendaria.team/services/products/ent/product"
-	utils_v1 "gitlab.calendaria.team/services/utils/api/utils/v1"
+	"github.com/makesalekz/products/ent"
+	"github.com/makesalekz/products/ent/barcode"
+	"github.com/makesalekz/products/ent/product"
+	utils_v1 "github.com/makesalekz/utils/api/utils/v1"
 )
 
 type ProductsRepo interface {

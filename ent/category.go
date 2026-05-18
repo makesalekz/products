@@ -9,7 +9,7 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"gitlab.calendaria.team/services/products/ent/category"
+	"github.com/makesalekz/products/ent/category"
 )
 
 // Category is the model entity for the Category schema.
